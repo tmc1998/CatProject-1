@@ -272,13 +272,8 @@ namespace src.project
         {
             if(currentFile != null)
             {
-                currentFile.createFileTranslateDocument();
                 string path = Path.Combine(pathTargetFolder, currentFile.getFileName());
-                if (File.Exists(path))
-                {
-                    File.Delete(path); 
-                }
-                File.WriteAllText(path, currentFile.content); 
+                currentFile.createFileTranslateDocument(path); 
             }
         }
     }

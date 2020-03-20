@@ -45,6 +45,10 @@ namespace src.segment
         {
             page = Page; 
         }
+        public int getPage()
+        {
+            return page; 
+        }
 
     }
 }

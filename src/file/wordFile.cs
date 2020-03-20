@@ -37,9 +37,24 @@ namespace src.Files
                 this.listSegmentsFromSave = txt.readSegmentFromFileSave(path);
             }
         }
-        public override void createFileTranslateDocument()
+        public override void createFileTranslateDocument(string path)
         {
-            throw new NotImplementedException();
+            //Copy file goc
+            string sourceFile = this.filePath;
+            string desFile = path;
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+            File.Copy(sourceFile, desFile);
+            //string destinationFile = this.file
+            replaceContent(path); 
+        }
+
+        public void replaceContent(string path)
+        {
+            wordProc wordproc = new wordProc();
+            wordproc.replaceContent(listSegments, path);
         }
 
     }

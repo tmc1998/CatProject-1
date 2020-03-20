@@ -31,12 +31,21 @@ namespace src.Files
             }
         }
 
-        public override void createFileTranslateDocument()
+        public override void createFileTranslateDocument(string path)
         {
-            txtProc txtProc = new txtProc(); 
-            if(this.content.Length > 0)
+            replaceContent();
+            if (File.Exists(path))
             {
-                foreach(Segment a in listSegments)
+                File.Delete(path);
+            }
+            File.WriteAllText(path, this.content);
+        }
+        public void replaceContent()
+        {
+            txtProc txtProc = new txtProc();
+            if (this.content.Length > 0)
+            {
+                foreach (Segment a in listSegments)
                 {
                     tm tmp = a.getTM();
                     if (tmp.Target != null)
