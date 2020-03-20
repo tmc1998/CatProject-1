@@ -136,9 +136,10 @@ namespace src.form
                         if (a.getFileName().Equals(nameFile))
                         {
                             mainForm.setAndReadCurrentFileProject(a);
+                            closeForm();
                             mainForm.readContentFile();
                             mainForm.openEditorForm();
-                            closeForm();
+                            //closeForm();
                             break; 
                         }
                     }
