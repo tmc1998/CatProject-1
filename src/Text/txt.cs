@@ -12,6 +12,6 @@ namespace src.Text
         public string EMPTY_PROJECT = "Dự án trống";
         public string CAT_INTRODUCTION = "Giới thiệu về CAT đây là 1 sản phẩm hỗ trợ dịch thuật";
         public string CAT_INTRODUCTION_LABEL = "Giới thiệu CAT";
-        public string CAT_EDITOR_LABEL = "Sửa chữa"; 
+        public string CAT_EDITOR_LABEL = "Đang làm việc với : "; 
     }
 }

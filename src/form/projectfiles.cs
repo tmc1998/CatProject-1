@@ -135,10 +135,16 @@ namespace src.form
                     {
                         if (a.getFileName().Equals(nameFile))
                         {
-                            mainForm.setAndReadCurrentFileProject(a);
-                            closeForm();
-                            mainForm.readContentFile();
-                            mainForm.openEditorForm();
+                            //mainForm.setAndReadCurrentFileProject(a);
+                            ////closeForm();
+                            //using (frmWaitForm frm = new frmWaitForm(mainForm.readContentFile))
+                            //{
+                            //    //mainForm.readContentFile();
+                            //    frm.ShowDialog(this); 
+                            //}
+                            //this.Close(); 
+                            //mainForm.openEditorForm();
+                            openFile(a);
                             //closeForm();
                             break; 
                         }
@@ -150,6 +156,18 @@ namespace src.form
         private void projectfiles_FormClosing(object sender, FormClosingEventArgs e)
         {
             mainForm.closeProjectFilesForm(); 
+        }
+        private void openFile(file a)
+        {
+            mainForm.setAndReadCurrentFileProject(a);
+            this.Hide(); 
+            using (frmWaitForm frm = new frmWaitForm(mainForm.readContentFile))
+            {
+                //mainForm.readContentFile();
+                frm.ShowDialog(this);
+            }
+            closeForm(); 
+            mainForm.openEditorForm(); 
         }
     }
 }

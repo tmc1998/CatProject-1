@@ -118,10 +118,10 @@ namespace src.form
             txt txt = new txt();
             rtbTutorial.Visible = false;
             editorGrid.Visible = true;
-            lblEditor.Text = txt.CAT_EDITOR_LABEL; 
             if(mainForm != null)
             {
                 file a = mainForm.project.getCurrentFile();
+                lblEditor.Text = txt.CAT_EDITOR_LABEL + mainForm.project.getCurrentFile().getFileName(); 
             }
             setSentencesToGridview(); 
         }

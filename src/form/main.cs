@@ -284,7 +284,11 @@ namespace src.form
         {
             if(project != null)
             {
-                project.createTranslatedDocument();
+                using(frmWaitForm frm = new frmWaitForm(project.createTranslatedDocument))
+                {
+                    frm.ShowDialog(this); 
+                }
+                //project.createTranslatedDocument();
                 TextOfMessageBox a = new TextOfMessageBox();
                 MessageBox.Show(a.CREATE_TRASLATED_DOCUMENT_SUCCESSFULLY,"Thông báo", MessageBoxButtons.YesNo);
             }
