@@ -19,3 +19,5 @@ D:\DoAnTotNghiep\CAT\src\obj\Debug\src.csproj.CopyComplete
 D:\DoAnTotNghiep\CAT\src\obj\Debug\src.form.createNewProject.resources
 D:\DoAnTotNghiep\CAT\src\obj\Debug\src.form.projectfiles.resources
 D:\DoAnTotNghiep\CAT\src\obj\Debug\src.form.frmWaitForm.resources
+D:\DoAnTotNghiep\CAT\src\bin\Debug\itextsharp.dll
+D:\DoAnTotNghiep\CAT\src\bin\Debug\itextsharp.xml

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblEditor = new System.Windows.Forms.Label();
             this.editorGrid = new System.Windows.Forms.DataGridView();
-            this.sourceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.targetColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rtbTutorial = new System.Windows.Forms.RichTextBox();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelRight = new System.Windows.Forms.Panel();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sourceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.targetColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editorGrid)).BeginInit();
             this.SuspendLayout();
@@ -70,11 +71,20 @@
             this.editorGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.editorGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.editorGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.editorGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.editorGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sourceColumn,
             this.targetColumn});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.editorGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.editorGrid.Location = new System.Drawing.Point(12, 54);
             this.editorGrid.MultiSelect = false;
             this.editorGrid.Name = "editorGrid";
@@ -86,21 +96,6 @@
             this.editorGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellClick);
             this.editorGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellContentClick);
             this.editorGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellEndEdit);
-            // 
-            // sourceColumn
-            // 
-            this.sourceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sourceColumn.HeaderText = "Source";
-            this.sourceColumn.Name = "sourceColumn";
-            this.sourceColumn.ReadOnly = true;
-            this.sourceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // targetColumn
-            // 
-            this.targetColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.targetColumn.HeaderText = "Target";
-            this.targetColumn.Name = "targetColumn";
-            this.targetColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // rtbTutorial
             // 
@@ -152,6 +147,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(947, 1);
             this.panel1.TabIndex = 6;
+            // 
+            // sourceColumn
+            // 
+            this.sourceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sourceColumn.HeaderText = "Source";
+            this.sourceColumn.Name = "sourceColumn";
+            this.sourceColumn.ReadOnly = true;
+            this.sourceColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // targetColumn
+            // 
+            this.targetColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.targetColumn.HeaderText = "Target";
+            this.targetColumn.MinimumWidth = 100;
+            this.targetColumn.Name = "targetColumn";
+            this.targetColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // editor
             // 

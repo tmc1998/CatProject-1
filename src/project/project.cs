@@ -250,6 +250,14 @@ namespace src.project
                                 a.loadFileSave(pathFile);
                                 listFileOfSourceProject.Add(a); 
                             }
+                            if(extension == ".pdf")
+                            {
+                                file a = new pdfFile();
+                                a.setFileName(fi.FullName);
+                                string pathFile = Path.Combine(pathSaveFolder, a.getFileNameSave());
+                                a.loadFileSave(pathFile);
+                                listFileOfSourceProject.Add(a); 
+                            }
                         }
                     }
                 }

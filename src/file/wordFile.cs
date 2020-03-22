@@ -27,7 +27,6 @@ namespace src.Files
                 listSegments.AddRange(tmp);
                 page++; 
             }
-            Console.WriteLine(listSegments.Count); 
         }
         public override void loadFileSave(string path)
         {
