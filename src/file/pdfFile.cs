@@ -12,6 +12,7 @@ namespace src.Files
 {
     public class pdfFile : file
     {
+        private string pathWordFile; 
         public override void readContent(string path)
         {
             pdfProc pdfproc = new pdfProc();
@@ -38,6 +39,10 @@ namespace src.Files
             }
         }
         public override void createFileTranslateDocument(string path)
+        {
+            throw new NotImplementedException();
+        }
+        public override void convertToWord(string path)
         {
             throw new NotImplementedException();
         }

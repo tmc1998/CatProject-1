@@ -43,24 +43,27 @@ namespace src.processing
                 do
                 {
                     int iLast = content.IndexOfAny(delimiters, iFirst);
-                    if (iLast >= 0)
+                    if (content[iLast] != '\n' && content[iLast + 1] != '\n')
                     {
-                        if (iLast > iFirst)
-                            if (iLast != iFirst)
-                            {
-                                string str1 = content.Substring(iFirst, iLast - iFirst + 1).Trim();
-                                if (str1 != "")
+                        if (iLast >= 0)
+                        {
+                            if (iLast > iFirst)
+                                if (iLast != iFirst)
                                 {
-                                    tm tm1 = new tm();
-                                    tm1.Source = str1;
-                                    Segment tmp1 = new Segment();
-                                    tmp1.setTM(tm1);
-                                    tmp1.setPage(page);
-                                    parts.Add(tmp1);
+                                    string str1 = content.Substring(iFirst, iLast - iFirst + 1).Trim();
+                                    if (str1 != "")
+                                    {
+                                        tm tm1 = new tm();
+                                        tm1.Source = str1;
+                                        Segment tmp1 = new Segment();
+                                        tmp1.setTM(tm1);
+                                        tmp1.setPage(page);
+                                        parts.Add(tmp1);
+                                    }
                                 }
-                            }
-                        iFirst = iLast + 1;
-                        continue;
+                            iFirst = iLast + 1;
+                            continue;
+                        }
                     }
                     string str = content.Substring(iFirst, content.Length - iFirst).Trim();
                     if (str != "")

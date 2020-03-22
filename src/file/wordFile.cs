@@ -55,6 +55,10 @@ namespace src.Files
             wordProc wordproc = new wordProc();
             wordproc.replaceContent(listSegments, path);
         }
+        public override void convertToWord(string path)
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }

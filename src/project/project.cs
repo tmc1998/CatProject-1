@@ -21,11 +21,13 @@ namespace src.project
         private string nameFileProject = "project.cat";
         private string sourceFolderName = "source";
         private string targetFolderName = "target";
-        private string saveFolderName = "save"; 
+        private string saveFolderName = "save";
+        private string tempFolderName = "temp"; 
         private string pathProject;
         private string pathSourceFolder;
         private string pathTargetFolder;
-        private string pathSaveFolder; 
+        private string pathSaveFolder;
+        private string pathTempFolder; 
         private string languageSource;
         private string languageTarget;
         private string projectName;
@@ -41,7 +43,8 @@ namespace src.project
             pathProject = path;
             pathSourceFolder = Path.Combine(path,this.sourceFolderName);
             pathTargetFolder = Path.Combine(path,this.targetFolderName);
-            pathSaveFolder = Path.Combine(path, this.saveFolderName); 
+            pathSaveFolder = Path.Combine(path, this.saveFolderName);
+            pathTempFolder = Path.Combine(path, this.tempFolderName); 
         }
 
         public void setNameProject(string name)
@@ -66,6 +69,10 @@ namespace src.project
         public void setSavePath(string path)
         {
             this.pathSaveFolder = path;
+        }
+        public void setTempPath(string path)
+        {
+            this.pathTempFolder = path; 
         }
         public void setSourceLang(string language)
         {
@@ -120,6 +127,11 @@ namespace src.project
         public string getPathSaveFolder()
         {
             return this.pathSaveFolder; 
+        }
+
+        public string getPathTempFolder()
+        {
+            return this.pathTempFolder; 
         }
 
         public string getNameProject()
@@ -193,8 +205,8 @@ namespace src.project
                 this.languageSource = tmp.languageSource;
                 this.languageTarget = tmp.languageTarget;
                 this.creationtime = tmp.creationtime;
-                this.pathSaveFolder = tmp.pathSaveFolder; 
-
+                this.pathSaveFolder = tmp.pathSaveFolder;
+                this.pathTempFolder = tmp.pathTempFolder; 
                 setListFile(); 
 
                 return true; 
@@ -209,7 +221,8 @@ namespace src.project
             Directory.CreateDirectory(this.pathProject);
             Directory.CreateDirectory(this.pathSourceFolder);
             Directory.CreateDirectory(this.pathTargetFolder);
-            Directory.CreateDirectory(this.pathSaveFolder); 
+            Directory.CreateDirectory(this.pathSaveFolder);
+            Directory.CreateDirectory(this.pathTempFolder); 
             //Tạo file xml của project 
             this.createXMLFileProject(); 
         }
@@ -256,6 +269,7 @@ namespace src.project
                                 a.setFileName(fi.FullName);
                                 string pathFile = Path.Combine(pathSaveFolder, a.getFileNameSave());
                                 a.loadFileSave(pathFile);
+                                //a.copy(); 
                                 listFileOfSourceProject.Add(a); 
                             }
                         }
@@ -274,6 +288,7 @@ namespace src.project
                 currentFile.readContent(path);
                 currentFile.setListSegmentsFormFileSave(); 
             }
+            
         }
 
         public void createTranslatedDocument()

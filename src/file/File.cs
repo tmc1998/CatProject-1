@@ -26,6 +26,7 @@ namespace src.Files
 
         public abstract void readContent(string path);
         public abstract void loadFileSave(string path);
+        public abstract void convertToWord(string path); 
 
         public abstract void createFileTranslateDocument(string path); 
 
