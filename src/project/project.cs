@@ -267,9 +267,11 @@ namespace src.project
                             {
                                 file a = new pdfFile();
                                 a.setFileName(fi.FullName);
-                                string pathFile = Path.Combine(pathSaveFolder, a.getFileNameSave());
-                                a.loadFileSave(pathFile);
+                                string pathFileSave = Path.Combine(pathSaveFolder, a.getFileNameSave());
+                                a.loadFileSave(pathFileSave);
                                 //a.copy(); 
+                                string pathFile = Path.Combine(pathSourceFolder, fi.FullName); 
+                                a.convertToWord(pathFile,pathTempFolder); 
                                 listFileOfSourceProject.Add(a); 
                             }
                         }
@@ -293,10 +295,17 @@ namespace src.project
 
         public void createTranslatedDocument()
         {
-            if(currentFile != null)
-            {
-                string path = Path.Combine(pathTargetFolder, currentFile.getFileName());
-                currentFile.createFileTranslateDocument(path); 
+            if (currentFile != null) {
+                if (currentFile is pdfFile)
+                {
+                    string path = Path.Combine(pathTargetFolder, currentFile.getConvertFileName());
+                    currentFile.createFileTranslateDocument(path); 
+                }
+                else
+                {
+                    string path = Path.Combine(pathTargetFolder, currentFile.getFileName());
+                    currentFile.createFileTranslateDocument(path);
+                }
             }
         }
     }

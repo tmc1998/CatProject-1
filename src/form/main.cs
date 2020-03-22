@@ -204,6 +204,13 @@ namespace src.form
                 projectFilesForm = new projectfiles(this);
                 projectFilesForm.Show();
             }
+            else
+            {
+                projectFilesForm.Close();
+
+                projectFilesForm = new projectfiles(this);
+                projectFilesForm.Show();
+            }
         }
 
         public void closeProjectFilesForm()

@@ -20,13 +20,14 @@ namespace src.Files
         public string extexsion;
         public char[] delimiters;
         public string content;
+        public string convertFileName; 
         public List<Segment> listSegments = new List<Segment>();
         public List<Segment> listSegmentsFromSave = new List<Segment>();
 
 
         public abstract void readContent(string path);
         public abstract void loadFileSave(string path);
-        public abstract void convertToWord(string path); 
+        public abstract void convertToWord(string path,string tempFolder); 
 
         public abstract void createFileTranslateDocument(string path); 
 
@@ -100,6 +101,10 @@ namespace src.Files
         public void setdelimiters(char[] Delemiters)
         {
             delimiters = Delemiters; 
+        }
+        public string getConvertFileName()
+        {
+            return convertFileName; 
         }
          
     }

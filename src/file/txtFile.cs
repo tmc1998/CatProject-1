@@ -58,7 +58,7 @@ namespace src.Files
                 }
             }
         }
-        public override void convertToWord(string path)
+        public override void convertToWord(string path,string tempFolder)
         {
             throw new NotImplementedException();
         }
