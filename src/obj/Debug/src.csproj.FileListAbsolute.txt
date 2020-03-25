@@ -23,3 +23,8 @@ D:\DoAnTotNghiep\CAT\src\bin\Debug\itextsharp.dll
 D:\DoAnTotNghiep\CAT\src\bin\Debug\itextsharp.xml
 D:\DoAnTotNghiep\CAT\src\bin\Debug\SautinSoft.PdfFocus.dll
 D:\DoAnTotNghiep\CAT\src\bin\Debug\SautinSoft.PdfFocus.xml
+D:\DoAnTotNghiep\CAT\src\bin\Debug\Newtonsoft.Json.dll
+D:\DoAnTotNghiep\CAT\src\bin\Debug\RestSharp.dll
+D:\DoAnTotNghiep\CAT\src\bin\Debug\Newtonsoft.Json.xml
+D:\DoAnTotNghiep\CAT\src\bin\Debug\RestSharp.xml
+D:\DoAnTotNghiep\CAT\src\obj\Debug\src.form.machineTranslation.resources

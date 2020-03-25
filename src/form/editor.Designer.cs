@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblEditor = new System.Windows.Forms.Label();
             this.editorGrid = new System.Windows.Forms.DataGridView();
-            this.rtbTutorial = new System.Windows.Forms.RichTextBox();
-            this.panelBottom = new System.Windows.Forms.Panel();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sourceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.targetColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rtbTutorial = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editorGrid)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -50,16 +48,16 @@
             this.panelTop.BackColor = System.Drawing.SystemColors.Window;
             this.panelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTop.Controls.Add(this.lblEditor);
-            this.panelTop.Location = new System.Drawing.Point(12, 12);
+            this.panelTop.Location = new System.Drawing.Point(12, 154);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(920, 36);
+            this.panelTop.Size = new System.Drawing.Size(1069, 25);
             this.panelTop.TabIndex = 0;
             // 
             // lblEditor
             // 
             this.lblEditor.AutoSize = true;
             this.lblEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditor.Location = new System.Drawing.Point(3, 10);
+            this.lblEditor.Location = new System.Drawing.Point(3, 5);
             this.lblEditor.Name = "lblEditor";
             this.lblEditor.Size = new System.Drawing.Size(34, 13);
             this.lblEditor.TabIndex = 0;
@@ -77,76 +75,25 @@
             this.editorGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sourceColumn,
             this.targetColumn});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.editorGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.editorGrid.Location = new System.Drawing.Point(12, 54);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.editorGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            this.editorGrid.Location = new System.Drawing.Point(6, 19);
             this.editorGrid.MultiSelect = false;
             this.editorGrid.Name = "editorGrid";
             this.editorGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.editorGrid.RowHeadersVisible = false;
             this.editorGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.editorGrid.Size = new System.Drawing.Size(920, 399);
+            this.editorGrid.Size = new System.Drawing.Size(1112, 473);
             this.editorGrid.TabIndex = 1;
             this.editorGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellClick);
             this.editorGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellContentClick);
             this.editorGrid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.editorGrid_CellEndEdit);
-            // 
-            // rtbTutorial
-            // 
-            this.rtbTutorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbTutorial.BackColor = System.Drawing.SystemColors.Window;
-            this.rtbTutorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbTutorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbTutorial.Location = new System.Drawing.Point(12, 54);
-            this.rtbTutorial.Name = "rtbTutorial";
-            this.rtbTutorial.ReadOnly = true;
-            this.rtbTutorial.Size = new System.Drawing.Size(920, 399);
-            this.rtbTutorial.TabIndex = 2;
-            this.rtbTutorial.Text = "";
-            // 
-            // panelBottom
-            // 
-            this.panelBottom.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 483);
-            this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(949, 1);
-            this.panelBottom.TabIndex = 3;
-            // 
-            // panelRight
-            // 
-            this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelRight.Location = new System.Drawing.Point(0, 0);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(1, 483);
-            this.panelRight.TabIndex = 4;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLeft.Location = new System.Drawing.Point(948, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(1, 483);
-            this.panelLeft.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(947, 1);
-            this.panel1.TabIndex = 6;
             // 
             // sourceColumn
             // 
@@ -164,18 +111,42 @@
             this.targetColumn.Name = "targetColumn";
             this.targetColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // rtbTutorial
+            // 
+            this.rtbTutorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbTutorial.BackColor = System.Drawing.SystemColors.Window;
+            this.rtbTutorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbTutorial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbTutorial.Location = new System.Drawing.Point(6, 19);
+            this.rtbTutorial.Name = "rtbTutorial";
+            this.rtbTutorial.ReadOnly = true;
+            this.rtbTutorial.Size = new System.Drawing.Size(1112, 473);
+            this.rtbTutorial.TabIndex = 2;
+            this.rtbTutorial.Text = "";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.rtbTutorial);
+            this.groupBox1.Controls.Add(this.editorGrid);
+            this.groupBox1.Location = new System.Drawing.Point(3, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1124, 500);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hướng dẫn";
+            // 
             // editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(949, 484);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.panelRight);
-            this.Controls.Add(this.panelBottom);
-            this.Controls.Add(this.rtbTutorial);
-            this.Controls.Add(this.editorGrid);
+            this.ClientSize = new System.Drawing.Size(1130, 510);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "editor";
@@ -184,6 +155,7 @@
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.editorGrid)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -194,11 +166,8 @@
         private System.Windows.Forms.Label lblEditor;
         private System.Windows.Forms.DataGridView editorGrid;
         private System.Windows.Forms.RichTextBox rtbTutorial;
-        private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Panel panelRight;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sourceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn targetColumn;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

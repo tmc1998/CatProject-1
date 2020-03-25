@@ -18,14 +18,17 @@ namespace src.Files
             wordProc wordproc = new wordProc();
             listContentPage = wordproc.readDocFile(path);
 
-            int page = 1; 
-            foreach(string contentPage in listContentPage)
+            if (listContentPage != null)
             {
-                content = content + contentPage; 
-                List<Segment> tmp = new List<Segment>();
-                tmp = wordproc.splitTxtContentToSegment(contentPage, delimiters,page);
-                listSegments.AddRange(tmp);
-                page++; 
+                int page = 1;
+                foreach (string contentPage in listContentPage)
+                {
+                    content = content + contentPage;
+                    List<Segment> tmp = new List<Segment>();
+                    tmp = wordproc.splitTxtContentToSegment(contentPage, delimiters, page);
+                    listSegments.AddRange(tmp);
+                    page++;
+                }
             }
         }
         public override void loadFileSave(string path)

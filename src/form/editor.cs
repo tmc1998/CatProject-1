@@ -12,6 +12,7 @@ using src.segment;
 using src.TM;
 using src.Text;
 using src.Files;
+using src.machinetranslator;
 
 namespace src.form
 {
@@ -40,8 +41,8 @@ namespace src.form
         {
             //init Size Form
            
-            this.Left = 5;
-            this.Top = 10;
+            this.Left = 0;
+            this.Top = 1;
             Rectangle recNew = new Rectangle();
             recNew.Width = ParentForm.ClientRectangle.Width / 2;
             recNew.Height = ParentForm.ClientRectangle.Height * 9/10; 
@@ -87,13 +88,12 @@ namespace src.form
 
         private void editorGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int index = e.RowIndex;
-            //if (index >= 0)
-            //{
-            //    List<tm> listResult = new List<tm>();
-            //    listResult = map(listSegments[index], lstTM);
-            //    fuzzymatchesForm.setText(listResult);
-            //}
+            int Index = e.RowIndex;
+            if (Index >= 0)
+            {
+                string source = editorGrid.Rows[Index].Cells["sourceColumn"].Value.ToString();
+                mainForm.translationMachine(source); 
+            }
         }
 
         public void openTutorial()
@@ -118,10 +118,11 @@ namespace src.form
             txt txt = new txt();
             rtbTutorial.Visible = false;
             editorGrid.Visible = true;
+            //UpdateFont(); 
             if(mainForm != null)
             {
                 file a = mainForm.project.getCurrentFile();
-                lblEditor.Text = txt.CAT_EDITOR_LABEL + mainForm.project.getCurrentFile().getFileName(); 
+                groupBox1.Text = mainForm.project.getCurrentFile().getFileName(); 
             }
             setSentencesToGridview(); 
         }
@@ -129,20 +130,29 @@ namespace src.form
         private void editorGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             int Index = e.RowIndex;
+            string SourceText = editorGrid.Rows[Index].Cells["sourceColumn"].Value.ToString();
+            string TargetText = null; 
+            tm tm = new tm();
+            Segment tmp = new Segment();
+            tm.Source = SourceText;
             if (editorGrid.Rows[Index].Cells["targetColumn"].Value != null)
             {
-                string TargetText = editorGrid.Rows[Index].Cells["targetColumn"].Value.ToString();
-                string SourceText = editorGrid.Rows[Index].Cells["sourceColumn"].Value.ToString();
+                TargetText = editorGrid.Rows[Index].Cells["targetColumn"].Value.ToString();
                 if (mainForm.project != null)
                 {
-                    mainForm.project.setTargetLangToCurrentFileListSegment(Index, TargetText);
-                    tm tm = new tm();
-                    tm.Source = SourceText;
-                    tm.Target = TargetText;
-                    Segment tmp = new Segment();
-                    tmp.setTM(tm);
-                    mainForm.project.addSegmentToListSaveSegment(tmp);
+                    tm.Target = TargetText;   
                 }
+            }
+            tmp.setTM(tm);
+            mainForm.project.setTargetLangToCurrentFileListSegment(Index, TargetText);
+            mainForm.project.addSegmentToListSaveSegment(tmp);
+        }
+        private void UpdateFont()
+        {
+            //Change cell font
+            foreach (DataGridViewColumn c in editorGrid.Columns)
+            {
+                c.DefaultCellStyle.Font = new Font("Arial", 14F, GraphicsUnit.Pixel);
             }
         }
     }

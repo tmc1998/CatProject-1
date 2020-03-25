@@ -47,7 +47,7 @@
             this.panelTop.Controls.Add(this.lblfuzzymatches);
             this.panelTop.Location = new System.Drawing.Point(12, 12);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(928, 38);
+            this.panelTop.Size = new System.Drawing.Size(760, 38);
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
             // 
@@ -73,7 +73,7 @@
             this.rtbFuzzyMatches.Location = new System.Drawing.Point(12, 56);
             this.rtbFuzzyMatches.Name = "rtbFuzzyMatches";
             this.rtbFuzzyMatches.ReadOnly = true;
-            this.rtbFuzzyMatches.Size = new System.Drawing.Size(928, 382);
+            this.rtbFuzzyMatches.Size = new System.Drawing.Size(760, 382);
             this.rtbFuzzyMatches.TabIndex = 1;
             this.rtbFuzzyMatches.Text = "";
             // 
@@ -83,7 +83,7 @@
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBottom.Location = new System.Drawing.Point(0, 449);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(952, 1);
+            this.panelBottom.Size = new System.Drawing.Size(784, 1);
             this.panelBottom.TabIndex = 2;
             // 
             // panelLeft
@@ -99,7 +99,7 @@
             // 
             this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(951, 0);
+            this.panelRight.Location = new System.Drawing.Point(783, 0);
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(1, 449);
             this.panelRight.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(950, 1);
+            this.panel1.Size = new System.Drawing.Size(782, 1);
             this.panel1.TabIndex = 5;
             // 
             // fuzzymatches
@@ -118,7 +118,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(952, 450);
+            this.ClientSize = new System.Drawing.Size(784, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);

@@ -271,7 +271,7 @@ namespace src.project
                                 a.loadFileSave(pathFileSave);
                                 //a.copy(); 
                                 string pathFile = Path.Combine(pathSourceFolder, fi.FullName); 
-                                a.convertToWord(pathFile,pathTempFolder); 
+                                //a.convertToWord(pathFile,pathTempFolder); 
                                 listFileOfSourceProject.Add(a); 
                             }
                         }

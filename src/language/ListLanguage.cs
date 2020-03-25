@@ -15,7 +15,7 @@ namespace src.language
             languageList = new List<Language>()
             {
                 new Language(){ name = "vi"},
-                new Language() { name = "en-US"}
+                new Language() { name = "en"}
             };
         }
         public List<Language> getListLanguage()

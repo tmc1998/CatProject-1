@@ -170,7 +170,13 @@ namespace src.processing
                         foreach (Segment seg in listSegInPage)
                         {
                             tm tmp = seg.getTM();
-                            findAndReplace(doc.Range(ref Start), tmp.Source, tmp.Target);
+                            if (tmp.Target != null)
+                            {
+                                if (tmp.Target.Trim() != "")
+                                {
+                                    findAndReplace(doc.Range(ref Start), tmp.Source, tmp.Target);
+                                }
+                            }
                         }
                     }
                     

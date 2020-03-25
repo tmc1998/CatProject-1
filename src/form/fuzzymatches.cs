@@ -13,9 +13,11 @@ namespace src.form
 {
     public partial class fuzzymatches : Form
     {
-        public fuzzymatches()
+        public main main;
+        public fuzzymatches(main Main)
         {
             InitializeComponent();
+            main = Main; 
         }
 
         private void fuzzymatches_Load(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace src.form
         public void initSize()
         {
             //init Size Form
-            this.Left = ParentForm.ClientRectangle.Width / 2 + 2;
+            this.Left = main.editorForm.Width + 2;
             this.Top = 10;
             //Rectangle recNew = new Rectangle();
             //recNew.Width = ParentForm.ClientRectangle.Width / 2;

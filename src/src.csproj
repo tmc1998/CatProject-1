@@ -45,6 +45,12 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="SautinSoft.PdfFocus, Version=7.4.2.27, Culture=neutral, PublicKeyToken=0b79b934109b3e9e, processorArchitecture=MSIL">
       <HintPath>..\packages\sautinsoft.pdffocus.7.4.2.27\lib\net47\SautinSoft.PdfFocus.dll</HintPath>
     </Reference>
@@ -54,6 +60,7 @@
     <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client\Client.cs" />
     <Compile Include="file\File.cs" />
     <Compile Include="file\pdfFile.cs" />
     <Compile Include="file\txtFile.cs" />
@@ -99,6 +107,12 @@
     <Compile Include="form\fuzzymatches.Designer.cs">
       <DependentUpon>fuzzymatches.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\machineTranslation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\machineTranslation.Designer.cs">
+      <DependentUpon>machineTranslation.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +127,10 @@
     </Compile>
     <Compile Include="language\Language.cs" />
     <Compile Include="language\ListLanguage.cs" />
+    <Compile Include="machinetranslator\machineTranslation.cs" />
+    <Compile Include="machinetranslator\machineTranslationMyMemory.cs" />
+    <Compile Include="machinetranslator\Mymemory.cs" />
+    <Compile Include="machinetranslator\urlAPI.cs" />
     <Compile Include="messagebox\TextOfMessageBox.cs" />
     <Compile Include="processing\pdfProc.cs" />
     <Compile Include="processing\txtProc.cs" />
@@ -136,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\fuzzymatches.resx">
       <DependentUpon>fuzzymatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\machineTranslation.resx">
+      <DependentUpon>machineTranslation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\main.resx">
       <DependentUpon>main.cs</DependentUpon>

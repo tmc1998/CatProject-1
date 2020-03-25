@@ -24,8 +24,9 @@ namespace src.form
         public editor editorForm;
         public createNewProject creatNewProjectForm;
         public projectfiles projectFilesForm;
+        public machineTranslation machineTranslationForm; 
         public string filter = "cat|*.cat";
-        public string catname = "CAT"; 
+        public string catname = "CAT";
         public System.Windows.Forms.Form ParentForm { get; }
 
         public main()
@@ -37,9 +38,21 @@ namespace src.form
         {
             //openChildForm();
             setBackColor();
-            initControl(); 
-            openChildForm();
+            //Init Control
+            initControl();
+            //------------
+
+            //Editor form
             openIntroduction();
+            //--------------
+
+            //Fuzzy matched form
+            openChildForm();
+            //------------------
+
+            //Machine Translation Form
+            openMachineTranslationForm();
+            //------------------------
             //initProject(); 
             //openProjectFilesForm();
         }
@@ -123,6 +136,7 @@ namespace src.form
 
                         }
                         openProjectFilesForm();
+                        setSourceLangandTargetLangtoMachineTrans();
                         reloadControl();
                         reloadNameCAT(); 
                     }
@@ -156,7 +170,7 @@ namespace src.form
 
         public void openChildForm()
         {
-            fuzzymatchesForm = new fuzzymatches();
+            fuzzymatchesForm = new fuzzymatches(this);
             fuzzymatchesForm.MdiParent = this;
             fuzzymatchesForm.Show();
 
@@ -177,6 +191,15 @@ namespace src.form
             if(editorForm != null)
             {
                 editorForm.openEditor(); 
+            }
+        }
+        public void openMachineTranslationForm()
+        {
+            if(machineTranslationForm == null)
+            {
+                machineTranslationForm = new machineTranslation(this);
+                machineTranslationForm.MdiParent = this;
+                machineTranslationForm.Show(); 
             }
         }
 
@@ -240,7 +263,7 @@ namespace src.form
             {
                 if (ctrl is MdiClient)
                 {
-                    ctrl.BackColor = SystemColors.Control;
+                    ctrl.BackColor = SystemColors.Window;
                 }
             }
         }
@@ -308,5 +331,49 @@ namespace src.form
                 project.saveProject(); 
             }
         }
+
+        private void myMemoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            myMemoryToolStripMenuItem.Checked = !(myMemoryToolStripMenuItem.Checked); 
+            if(machineTranslationForm != null)
+            {
+                machineTranslationForm.setActiveMymemoryMachine(myMemoryToolStripMenuItem.Checked); 
+            }
+        }
+        private void setSourceLangandTargetLangtoMachineTrans()
+        {
+            if(project != null)
+            {
+                if(machineTranslationForm != null)
+                {
+                    machineTranslationForm.setSourceLangandTargetLangmachine(project.getSourceLang(), project.getTargetLang()); 
+                }
+            }
+        }
+        public void translationMachine(string source)
+        {
+            if(project != null)
+            {
+                if(machineTranslationForm != null)
+                {
+                    machineTranslationForm.translate(source); 
+                }
+            }
+        }
+
+        //Set from file 
+
+        private void setMenufromFile()
+        {
+
+        }
+
+        private void setMachineTranslationFormFile()
+        {
+
+        }
+
+
+        //-------------
     }
 }

@@ -35,6 +35,8 @@
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createTranslatedDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.machineTranslationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myMemoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +44,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectToolStripMenuItem});
+            this.projectToolStripMenuItem,
+            this.machineTranslationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -64,37 +67,52 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "Tạo dự án";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Mở dự án";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // reloadToolStripMenuItem
             // 
             this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reloadToolStripMenuItem.Text = "Tải lại";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // SaveToolStripMenuItem
             // 
             this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.SaveToolStripMenuItem.Text = "Lưu";
             this.SaveToolStripMenuItem.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
             // 
             // createTranslatedDocumentToolStripMenuItem
             // 
             this.createTranslatedDocumentToolStripMenuItem.Name = "createTranslatedDocumentToolStripMenuItem";
-            this.createTranslatedDocumentToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.createTranslatedDocumentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createTranslatedDocumentToolStripMenuItem.Text = "Tạo tập tin dịch";
             this.createTranslatedDocumentToolStripMenuItem.Click += new System.EventHandler(this.createTranslatedDocumentToolStripMenuItem_Click);
+            // 
+            // machineTranslationToolStripMenuItem
+            // 
+            this.machineTranslationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.myMemoryToolStripMenuItem});
+            this.machineTranslationToolStripMenuItem.Name = "machineTranslationToolStripMenuItem";
+            this.machineTranslationToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.machineTranslationToolStripMenuItem.Text = "Machine Translation";
+            // 
+            // myMemoryToolStripMenuItem
+            // 
+            this.myMemoryToolStripMenuItem.Name = "myMemoryToolStripMenuItem";
+            this.myMemoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.myMemoryToolStripMenuItem.Text = "MyMemory";
+            this.myMemoryToolStripMenuItem.Click += new System.EventHandler(this.myMemoryToolStripMenuItem_Click);
             // 
             // main
             // 
@@ -126,5 +144,7 @@
         private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SaveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createTranslatedDocumentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem machineTranslationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem myMemoryToolStripMenuItem;
     }
 }
