@@ -31,11 +31,9 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblfuzzymatches = new System.Windows.Forms.Label();
             this.rtbFuzzyMatches = new System.Windows.Forms.RichTextBox();
-            this.panelBottom = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelTop.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -45,9 +43,9 @@
             this.panelTop.BackColor = System.Drawing.SystemColors.Window;
             this.panelTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTop.Controls.Add(this.lblfuzzymatches);
-            this.panelTop.Location = new System.Drawing.Point(12, 12);
+            this.panelTop.Location = new System.Drawing.Point(29, 175);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(760, 38);
+            this.panelTop.Size = new System.Drawing.Size(219, 38);
             this.panelTop.TabIndex = 0;
             this.panelTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTop_Paint);
             // 
@@ -70,60 +68,31 @@
             this.rtbFuzzyMatches.BackColor = System.Drawing.SystemColors.Window;
             this.rtbFuzzyMatches.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbFuzzyMatches.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbFuzzyMatches.Location = new System.Drawing.Point(12, 56);
+            this.rtbFuzzyMatches.Location = new System.Drawing.Point(8, 19);
             this.rtbFuzzyMatches.Name = "rtbFuzzyMatches";
             this.rtbFuzzyMatches.ReadOnly = true;
-            this.rtbFuzzyMatches.Size = new System.Drawing.Size(760, 382);
+            this.rtbFuzzyMatches.Size = new System.Drawing.Size(780, 429);
             this.rtbFuzzyMatches.TabIndex = 1;
             this.rtbFuzzyMatches.Text = "";
             // 
-            // panelBottom
+            // groupBox1
             // 
-            this.panelBottom.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 449);
-            this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(784, 1);
-            this.panelBottom.TabIndex = 2;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(1, 449);
-            this.panelLeft.TabIndex = 3;
-            // 
-            // panelRight
-            // 
-            this.panelRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(783, 0);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(1, 449);
-            this.panelRight.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 1);
-            this.panel1.TabIndex = 5;
+            this.groupBox1.Controls.Add(this.rtbFuzzyMatches);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(794, 454);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Fuzzy matched";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // fuzzymatches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(784, 450);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelRight);
-            this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.panelBottom);
-            this.Controls.Add(this.rtbFuzzyMatches);
+            this.ClientSize = new System.Drawing.Size(799, 460);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fuzzymatches";
@@ -131,6 +100,7 @@
             this.Load += new System.EventHandler(this.fuzzymatches_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -140,9 +110,6 @@
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lblfuzzymatches;
         private System.Windows.Forms.RichTextBox rtbFuzzyMatches;
-        private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panelRight;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

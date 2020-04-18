@@ -37,6 +37,7 @@
             this.createTranslatedDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.machineTranslationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myMemoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openNMTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +103,8 @@
             // machineTranslationToolStripMenuItem
             // 
             this.machineTranslationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.myMemoryToolStripMenuItem});
+            this.myMemoryToolStripMenuItem,
+            this.openNMTToolStripMenuItem});
             this.machineTranslationToolStripMenuItem.Name = "machineTranslationToolStripMenuItem";
             this.machineTranslationToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
             this.machineTranslationToolStripMenuItem.Text = "Machine Translation";
@@ -113,6 +115,13 @@
             this.myMemoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.myMemoryToolStripMenuItem.Text = "MyMemory";
             this.myMemoryToolStripMenuItem.Click += new System.EventHandler(this.myMemoryToolStripMenuItem_Click);
+            // 
+            // openNMTToolStripMenuItem
+            // 
+            this.openNMTToolStripMenuItem.Name = "openNMTToolStripMenuItem";
+            this.openNMTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openNMTToolStripMenuItem.Text = "OpenNMT";
+            this.openNMTToolStripMenuItem.Click += new System.EventHandler(this.openNMTToolStripMenuItem_Click);
             // 
             // main
             // 
@@ -146,5 +155,6 @@
         private System.Windows.Forms.ToolStripMenuItem createTranslatedDocumentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem machineTranslationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem myMemoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openNMTToolStripMenuItem;
     }
 }

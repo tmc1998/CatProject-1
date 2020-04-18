@@ -30,7 +30,7 @@ namespace src.form
         {
             //init Size Form
             this.Left = main.editorForm.Width + 2;
-            this.Top = 10;
+            this.Top = 0;
             //Rectangle recNew = new Rectangle();
             //recNew.Width = ParentForm.ClientRectangle.Width / 2;
             //recNew.Height = ParentForm.ClientRectangle.Height / 2;
@@ -67,6 +67,11 @@ namespace src.form
         }
 
         private void lblfuzzymatches_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

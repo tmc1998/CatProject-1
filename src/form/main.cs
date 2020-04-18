@@ -340,6 +340,14 @@ namespace src.form
                 machineTranslationForm.setActiveMymemoryMachine(myMemoryToolStripMenuItem.Checked); 
             }
         }
+        private void openNMTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openNMTToolStripMenuItem.Checked = !(openNMTToolStripMenuItem.Checked); 
+            if(machineTranslationForm != null)
+            {
+                machineTranslationForm.setActiveOpenNMTMachine(openNMTToolStripMenuItem.Checked); 
+            }
+        }
         private void setSourceLangandTargetLangtoMachineTrans()
         {
             if(project != null)
@@ -361,6 +369,14 @@ namespace src.form
             }
         }
 
+        public void resetTextMachineTranslationForm()
+        {
+            if(machineTranslationForm != null)
+            {
+                machineTranslationForm.resetText(); 
+            }
+        }
+
         //Set from file 
 
         private void setMenufromFile()
@@ -372,6 +388,7 @@ namespace src.form
         {
 
         }
+
 
 
         //-------------

@@ -92,6 +92,7 @@ namespace src.form
             if (Index >= 0)
             {
                 string source = editorGrid.Rows[Index].Cells["sourceColumn"].Value.ToString();
+                mainForm.resetTextMachineTranslationForm(); 
                 mainForm.translationMachine(source); 
             }
         }

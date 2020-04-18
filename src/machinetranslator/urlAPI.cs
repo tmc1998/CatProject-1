@@ -13,5 +13,9 @@ namespace src.machinetranslator
             public string urlTranslatorMymemory = @"https://api.mymemory.translated.net/get?q={0}&langpair={1}|{2}";
             public string urlSetMymemory = @"https://api.mymemory.translated.net/set?seg={0}!&tra={1}!&langpair={2}|{3}";
         }
+        public class openNMT
+        {
+            public string urlTranslatorOpenNMT = "http://127.0.0.1:5000/translator/";
+        }
     }
 }

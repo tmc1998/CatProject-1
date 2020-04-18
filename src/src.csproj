@@ -129,7 +129,10 @@
     <Compile Include="language\ListLanguage.cs" />
     <Compile Include="machinetranslator\machineTranslation.cs" />
     <Compile Include="machinetranslator\machineTranslationMyMemory.cs" />
+    <Compile Include="machinetranslator\machineTranslationOpenNMT.cs" />
     <Compile Include="machinetranslator\Mymemory.cs" />
+    <Compile Include="machinetranslator\OpenNMT.cs" />
+    <Compile Include="machinetranslator\openNMTPost.cs" />
     <Compile Include="machinetranslator\urlAPI.cs" />
     <Compile Include="messagebox\TextOfMessageBox.cs" />
     <Compile Include="processing\pdfProc.cs" />

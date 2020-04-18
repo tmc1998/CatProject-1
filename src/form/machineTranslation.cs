@@ -14,7 +14,8 @@ namespace src.form
     public partial class machineTranslation : Form
     {
         public main mainForm;
-        public List<machineTranslationBase> listMachine = new List<machineTranslationBase>(); 
+        public List<machineTranslationBase> listMachine = new List<machineTranslationBase>();
+        public string textTranslation; 
         public machineTranslation(main MainForm)
         {
             InitializeComponent();
@@ -30,11 +31,20 @@ namespace src.form
             this.Left = mainForm.editorForm.Width + 2;
             this.Top = ParentForm.ClientRectangle.Height / 2 - 50;
         }
+
+        public void resetText()
+        {
+            rtbTranslated.Text = "";
+            textTranslation = null; 
+        }
         private void initMachineTranslation()
         {
             //MyMemmory
             machineTranslationBase mymemory = new machineTranslationMyMemory();
-            listMachine.Add(mymemory); 
+            listMachine.Add(mymemory);
+
+            machineTranslationBase openNMT = new machineTranslationOpenNMT();
+            listMachine.Add(openNMT); 
         }
         public void setActiveMymemoryMachine(bool active)
         {
@@ -51,6 +61,21 @@ namespace src.form
             }
         }
 
+        public void setActiveOpenNMTMachine(bool active)
+        {
+            if (listMachine.Count >= 0)
+            {
+                for (int i = 0; i < listMachine.Count; i++)
+                {
+                    if (listMachine[i] is machineTranslationOpenNMT)
+                    {
+                        listMachine[i].isActive = active;
+                        break;
+                    }
+                }
+            }
+        }
+
         public void translate(string sourceText)
         {
             foreach(machineTranslationBase machine in listMachine)
@@ -58,12 +83,13 @@ namespace src.form
                 if (machine.isActive)
                 {
                     string text = machine.getTargetLang(sourceText);
-                    rtbTranslated.Text = text;
+                    textTranslation += text + "\n"; 
                     Console.WriteLine(text);
                     Console.WriteLine(sourceText);
                     Console.WriteLine(machine.source + "::" + machine.target);
                 }
             }
+            rtbTranslated.Text = textTranslation;
         }
 
         public void setSourceLangandTargetLangmachine(string source, string target)
